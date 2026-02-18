@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import "tailwindcss/preflight";
+@tailwind utilities;
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    #0f1b2d 0%,
+    #081018 40%,
+    #000000 100%
+  );
+  color: white;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+/* Card principal */
+.login-card {
+  background: linear-gradient(
+    145deg,
+    rgba(8, 20, 35, 0.95),
+    rgba(3, 10, 20, 0.95)
+  );
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 60px 50px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Label azul neón */
+.label-neon {
+  color: #00f5ff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* Input estilo línea */
+.input-line {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  padding: 10px 0;
+  font-size: 18px;
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-line:focus {
+  border-bottom: 2px solid #00f5ff;
+  box-shadow: 0 4px 10px rgba(0, 245, 255, 0.3);
+}
+
+/* Botón neón */
+.neon-button {
+  background: #00f5ff;
+  color: #001018;
+  padding: 14px 40px;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 0 10px #00f5ff,
+    0 0 25px rgba(0, 245, 255, 0.6);
+}
+
+.neon-button:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 20px #00f5ff,
+    0 0 40px rgba(0, 245, 255, 0.8);
 }
