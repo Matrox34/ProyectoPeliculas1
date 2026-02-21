@@ -1,4 +1,4 @@
-const API_URL = "http://localhost/apiPeliculas";
+const API_URL = "https://ruxxcluster.online/peliculas-admin/apiPeliculas";
 
 export async function apiRequest(
   endpoint: string,
@@ -13,6 +13,9 @@ export async function apiRequest(
     body: body ? JSON.stringify(body) : undefined,
   });
 
-  const data = await response.json();
-  return data;
+  if (!response.ok) {
+    throw new Error("Error en la petición");
+  }
+
+  return await response.json();
 }

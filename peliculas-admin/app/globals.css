@@ -74,3 +74,25 @@ body {
     0 0 20px #00f5ff,
     0 0 40px rgba(0, 245, 255, 0.8);
 }
+
+
+
+.mini-btn-cyan {
+  @apply px-3 py-1 text-xs rounded-full border border-cyan-400 text-cyan-300;
+}
+
+.mini-btn-yellow {
+  @apply px-3 py-1 text-xs rounded-full border border-yellow-400 text-yellow-300;
+}
+
+.mini-btn-red {
+  @apply px-3 py-1 text-xs rounded-full border border-red-400 text-red-300;
+}
+
+.mini-btn-green {
+  @apply px-3 py-1 text-xs rounded-full border border-green-400 text-green-300;
+}
+
+.mini-btn-gray {
+  @apply px-3 py-1 text-xs rounded-full border border-gray-400 text-gray-300;
+}
